@@ -18,6 +18,8 @@ body{
 svg{
     width: 2rem;
     position: absolute;
+    background-color: transparent;
+    opacity: 40%;
     cursor: pointer;
 }
 

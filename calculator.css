@@ -173,6 +173,7 @@ svg{
     padding-right: 15px;
     padding-left: 15px;
     color: var(--font);
+    font-size: 3rem;
     width: 100%;
     text-align: right;
     overflow-wrap: break-word;

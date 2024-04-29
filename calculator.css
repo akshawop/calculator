@@ -1,0 +1,163 @@
+:root{
+    --theme: white;
+    --font: black;
+    --special: green;
+}
+
+*{
+    background-color: var(--theme);
+    color: var(--font);
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: var(--theme);
+}
+
+svg{
+    width: 2rem;
+    position: absolute;
+}
+
+#theme{
+    display: none;
+}
+
+.sidebar h2{
+    align-self: center;
+    margin-bottom: .5em;
+    padding: 1em 0;
+    color: var(--theme);
+    background-color: var(--special);
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: var(--font);
+    padding: 1em 1.3em;
+}
+
+.sidebar a:hover{
+    color: var(--special);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.sidebar a:active{
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: var(--special);
+    color: var(--theme);
+}
+
+.sidebar{
+    background-color: var(--theme);
+    position: fixed;
+    z-index: 10;
+    height: 100dvh;
+    width: 54dvw;
+    left: -100%;
+    transition: .7s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+#theme:checked ~ .sidebar{
+    left: 0;
+}
+
+#overlay{
+    opacity: 0%;
+    transition: .7s ease;
+}
+
+#theme:checked ~ #overlay{
+    background-color: black;
+    opacity: 30%;
+    position: absolute;
+    z-index: 9;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+#pallate{
+    top: 20px;
+    left: 15px;
+    fill: var(--font);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.display-screen{
+    height: 35dvh;
+    font-family: courier;
+    font-weight: 500;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.display-screen span{
+    margin-right: 15px;
+    color: var(--font);
+}
+
+hr{
+    margin: 5px 15px;
+}
+
+.keypad{
+    flex: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+}
+
+.keypad div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    font-size: 1.5rem;
+    transition: .08s ease;
+}
+
+.keypad div:active{
+    color: var(--special);
+    font-size: 3rem;
+}
+
+.keypad .others:active{
+    color: var(--special);
+    font-size: 2rem;
+}
+
+.keypad .symbols{
+    font-size: 2rem;
+}
+
+.keypad #equal{
+    background-color: var(--special);
+    color: var(--theme);
+    grid-area: 6 / 3 / -1 / -1;
+    font-size: 3rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.keypad #equal:active{
+    background-color: var(--theme);
+    color: var(--font);
+}

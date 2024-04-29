@@ -24,7 +24,17 @@ svg{
     display: none;
 }
 
-.sidebar h2{
+.sidebar #mode{
+    align-self: center;
+    margin-bottom: .5em;
+    padding: 1em 0;
+    color: var(--theme);
+    background-color: var(--font);
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar #colors{
     align-self: center;
     margin-bottom: .5em;
     padding: 1em 0;

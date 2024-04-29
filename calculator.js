@@ -1,44 +1,22 @@
 let root = document.querySelector(":root");
-function lightDefaultTheme()
+
+function themes(id)
 {
-    root.style.setProperty("--theme", "white");
-    root.style.setProperty("--font", "black");
-    root.style.setProperty("--special", "green");
+    if(id === "light")
+    {
+        root.style.setProperty("--theme", "white");
+        root.style.setProperty("--font", "black");
+    }
+    else
+    {
+        root.style.setProperty("--theme", "black");
+        root.style.setProperty("--font", "white");
+    }
 }
 
-function darkDefaultTheme()
+function colors(id)
 {
-    root.style.setProperty("--theme", "black");
-    root.style.setProperty("--font", "white");
-    root.style.setProperty("--special", "green");
-}
-
-function lightBlueTheme()
-{
-    root.style.setProperty("--theme", "white");
-    root.style.setProperty("--font", "black");
-    root.style.setProperty("--special", "royalblue");
-}
-
-function darkBlueTheme()
-{
-    root.style.setProperty("--theme", "black");
-    root.style.setProperty("--font", "white");
-    root.style.setProperty("--special", "royalblue");
-}
-
-function lightOrangeTheme()
-{
-    root.style.setProperty("--theme", "white");
-    root.style.setProperty("--font", "black");
-    root.style.setProperty("--special", "orange");
-}
-
-function darkOrangeTheme()
-{
-    root.style.setProperty("--theme", "black");
-    root.style.setProperty("--font", "white");
-    root.style.setProperty("--special", "orange");
+    root.style.setProperty("--special", id);
 }
 
 let display=document.querySelector("span");
@@ -118,10 +96,11 @@ function equalsOperation()
     try
     {
         display.innerText = eval(expression);
+        expression = display.innerText;
     }
     catch(err)
     {
         display.innerText = "Error";
+        expression = "Error";
     }
-    expression = "";
 }

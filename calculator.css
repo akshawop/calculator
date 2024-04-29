@@ -27,6 +27,10 @@ svg{
     display: none;
 }
 
+.sidebar a{
+    cursor: pointer;
+}
+
 .sidebar #mode{
     align-self: center;
     margin-bottom: .5em;
@@ -35,6 +39,25 @@ svg{
     background-color: var(--font);
     width: 100%;
     text-align: center;
+}
+
+.sidebar .mode-list{
+    text-decoration: none;
+    color: var(--font);
+    padding: 1em 1.3em;
+}
+
+.sidebar .mode-list:hover{
+    color: var(--font);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.sidebar .mode-list:active{
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: var(--theme);
+    color: var(--font);
 }
 
 .sidebar #colors{
@@ -47,20 +70,19 @@ svg{
     text-align: center;
 }
 
-.sidebar a{
+.sidebar .color-list{
     text-decoration: none;
     color: var(--font);
     padding: 1em 1.3em;
-    cursor: pointer;
 }
 
-.sidebar a:hover{
+.sidebar .color-list:hover{
     color: var(--special);
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-.sidebar a:active{
+.sidebar .color-list:active{
     font-weight: bold;
     font-size: 1.2rem;
     background-color: var(--special);

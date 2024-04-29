@@ -38,7 +38,7 @@ function colors(id)
 }
 
 //selecting display screen element and creating new variable for calculation
-let display=document.querySelector("span");
+let display=document.querySelector("#display-text");
 let expression = "";
 
 //function to show calculation on display screen, store them in the expression variable and some bug fixes

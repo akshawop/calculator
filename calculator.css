@@ -61,6 +61,7 @@ svg{
 
 .sidebar #colors{
     align-self: center;
+    margin-top: 1em;
     margin-bottom: .5em;
     padding: 1em 0;
     color: var(--theme);

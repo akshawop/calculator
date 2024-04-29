@@ -108,18 +108,28 @@ svg{
 }
 
 .display-screen{
-    height: 35dvh;
+    height: 40dvh;
     font-family: courier;
     font-weight: 500;
     font-size: 2rem;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    overflow: auto;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
 }
 
 .display-screen span{
     margin-right: 15px;
+    margin-left: 15px;
     color: var(--font);
+    width: 100%;
+    background-color: red;
+    text-align: right;
+    overflow-wrap: break-word;
+    overflow-x: scroll;
+    max-height: 40dvh;
 }
 
 hr{

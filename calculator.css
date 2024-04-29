@@ -48,7 +48,6 @@ svg{
 }
 
 .sidebar .mode-list:hover{
-    color: var(--font);
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -56,8 +55,8 @@ svg{
 .sidebar .mode-list:active{
     font-weight: bold;
     font-size: 1.2rem;
-    background-color: var(--theme);
-    color: var(--font);
+    background-color: var(--font);
+    color: var(--theme);
 }
 
 .sidebar #colors{

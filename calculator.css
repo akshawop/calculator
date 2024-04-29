@@ -67,7 +67,7 @@ svg{
     color: var(--theme);
 }
 
-.sidebar span{
+.sidebar #custom-colors{
     margin-top: auto;
     padding: 1em 1.5em;
     background-image: linear-gradient(45deg, green, red, royalblue, orange);

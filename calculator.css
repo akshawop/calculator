@@ -18,6 +18,7 @@ body{
 svg{
     width: 2rem;
     position: absolute;
+    cursor: pointer;
 }
 
 #theme{
@@ -48,6 +49,7 @@ svg{
     text-decoration: none;
     color: var(--font);
     padding: 1em 1.3em;
+    cursor: pointer;
 }
 
 .sidebar a:hover{
@@ -140,6 +142,7 @@ hr{
     border-right: 1px solid lightgrey;
     font-size: 1.5rem;
     transition: .08s ease;
+    cursor: pointer;
 }
 
 .keypad div:active{

@@ -89,6 +89,22 @@ svg{
     color: var(--theme);
 }
 
+.sidebar #green:hover{
+    color: green;
+}
+
+.sidebar #red:hover{
+    color: red;
+}
+
+.sidebar #royalblue:hover{
+    color: royalblue;
+}
+
+.sidebar #orange:hover{
+    color: orange;
+}
+
 .sidebar #custom-colors{
     margin-top: auto;
     padding: 1em 1.5em;

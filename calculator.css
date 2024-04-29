@@ -171,12 +171,11 @@ svg{
 
 .display-screen #display-text{
     margin-right: 15px;
-    margin-left: 15px;
+    padding-left: 15px;
     color: var(--font);
     width: 100%;
     text-align: right;
     overflow-wrap: break-word;
-    overflow-x: scroll;
     max-height: 40dvh;
 }
 

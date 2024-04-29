@@ -45,7 +45,7 @@ let expression = "";
 function showOnDisplay(element)
 {
     //scrolls to the end line
-    display.scrollTop = display.scrollHeight;
+    display.scrollTo(0, display.scrollHeight);
     
     if(element === "×")
     {

@@ -67,9 +67,18 @@ svg{
     color: var(--theme);
 }
 
+.sidebar span{
+    margin-top: auto;
+    padding: 1em 1.5em;
+    background-image: linear-gradient(45deg, green, red, royalblue, orange);
+    background-clip: text;
+    color: transparent;
+    font-weight: bolder;
+}
+
 .sidebar{
     background-color: var(--theme);
-    position: fixed;
+    position: absolute;
     z-index: 10;
     height: 100dvh;
     width: 54dvw;

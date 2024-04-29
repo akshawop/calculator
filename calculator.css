@@ -131,7 +131,7 @@ svg{
     scroll-behavior: smooth;
 }
 
-.display-screen span{
+.display-screen #display-text{
     margin-right: 15px;
     margin-left: 15px;
     color: var(--font);

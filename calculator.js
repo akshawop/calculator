@@ -44,6 +44,9 @@ let expression = "";
 //function to show calculation on display screen, store them in the expression variable and some bug fixes
 function showOnDisplay(element)
 {
+    //scrolls to the end line
+    display.scrollTop = display.scrollHeight;
+    
     if(element === "×")
     {
         if(!(expression.charAt(expression.length-1) === "*" || expression === ""))

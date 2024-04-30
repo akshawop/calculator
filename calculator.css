@@ -177,8 +177,7 @@ svg{
     width: 100%;
     text-align: right;
     overflow-wrap: break-word;
-    max-height: 97%;
-    overflow-x: hidden;
+    max-height: 100dvw;
 }
 
 hr{

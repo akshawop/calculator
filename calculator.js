@@ -73,7 +73,7 @@ function showOnDisplay(element)
     }
     else if(element === ".")
     {
-        if(!(expression.charAt(expression.length-1) === element.toString() || expression === ""))
+        if(!(expression.charAt(expression.length-1) === element.toString()))
         {
             display.innerText += element;
             expression += element;
@@ -81,7 +81,7 @@ function showOnDisplay(element)
     }
     else if(element === "+")
     {
-        if(!(expression.charAt(expression.length-1) === element.toString() || expression === ""))
+        if(!(expression.charAt(expression.length-1) === element.toString()))
         {
             display.innerText += element;
             expression += element;
@@ -89,7 +89,7 @@ function showOnDisplay(element)
     }
     else if(element === "-")
     {
-        if(!(expression.charAt(expression.length-1) === element.toString() || expression === ""))
+        if(!(expression.charAt(expression.length-1) === element.toString()))
         {
             display.innerText += element;
             expression += element;

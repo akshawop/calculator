@@ -8,6 +8,9 @@ if(localStorage.getItem("theme"))
     root.style.setProperty("--font", localStorage.getItem("font"));
 }
 
+//colors settings on page reload
+localStorage.getItem("special") && root.style.setProperty("--special", localStorage.getItem("special"));
+
 //theme modes switching function
 function themes(id)
 {
@@ -26,9 +29,6 @@ function themes(id)
         root.style.setProperty("--font", localStorage.getItem("font"));
     }
 }
-
-//colors settings on page reload
-localStorage.getItem("special") && root.style.setProperty("--special", localStorage.getItem("special"));
 
 //colors switching function
 function colors(id)

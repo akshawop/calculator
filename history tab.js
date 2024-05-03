@@ -39,7 +39,7 @@ localStorage.getItem("counter") ? i = Number(localStorage.getItem("counter")) : 
 function storeHistory()
 {
     i++;
-    historyItem = `<span id=\"equation\" title=${expression} onclick=\"accessHistory(this.innerText, this.title);\">${display.innerText}<br><span id=\"result\">=${eval(expression)}</span></span><br>`;
+    historyItem = `<span id=\"equation\" title=${expression} onclick=\"accessHistory(this.innerText, this.title);\">${display.innerText}<br><span id=\"result\">= ${eval(expression)}</span></span><br>`;
     historyTab.innerText === "No history" ? historyTab.innerHTML = historyItem : historyTab.innerHTML += historyItem;
     localStorage.setItem(i, historyItem);
     localStorage.setItem("counter", i);
@@ -48,7 +48,7 @@ function storeHistory()
 //accessing the history
 function accessHistory(displayValue, realValue)
 {
-    displayValue = displayValue.slice(0, displayValue.indexOf("="));
+    displayValue = displayValue.slice(0, displayValue.indexOf("\n"));
     display.innerText = displayValue;
     expression = realValue;
     historyTabToggle();

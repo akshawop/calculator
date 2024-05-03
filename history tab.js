@@ -1,7 +1,9 @@
+//elements selection
 const historyTab = document.querySelector(".history-tab");
 const keypad = document.querySelector(".keypad");
 const clrHistoryButton = document.querySelector("#clear-history");
 
+//history tab open/close
 function historyTabToggle()
 {
     if(historyTab.style.minHeight === "")
@@ -20,6 +22,7 @@ function historyTabToggle()
     historyTab.scrollTo(0, historyTab.scrollHeight);
 }
 
+//printing past history tab elements on page load
 if(localStorage.getItem("counter"))
 {
     historyTab.innerText = "";
@@ -28,9 +31,11 @@ if(localStorage.getItem("counter"))
         historyTab.innerHTML += localStorage.getItem(k);
 }
 
+//setting initial value of key of history elements
 let i;
 localStorage.getItem("counter") ? i = Number(localStorage.getItem("counter")) : i = 0;
 
+//storing the calculations
 function storeHistory()
 {
     i++;
@@ -40,6 +45,7 @@ function storeHistory()
     localStorage.setItem("counter", i);
 }
 
+//accessing the history
 function accessHistory(displayValue, realValue)
 {
     displayValue = displayValue.slice(0, displayValue.indexOf("="));
@@ -48,6 +54,7 @@ function accessHistory(displayValue, realValue)
     historyTabToggle();
 }
 
+//clearing the history tab
 function clearHistory()
 {
     historyTab.innerHTML = "No history";

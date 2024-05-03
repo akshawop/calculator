@@ -81,7 +81,7 @@ function showOnDisplay(element)
     }
     else if(element === "+")
     {
-        if(!(expression.charAt(expression.length-1) === element.toString()))
+        if(!(expression.charAt(expression.length-1) === element.toString() || expression.charAt(expression.length-1) === "-"))
         {
             display.innerText += element;
             expression += element;
@@ -89,7 +89,7 @@ function showOnDisplay(element)
     }
     else if(element === "-")
     {
-        if(!(expression.charAt(expression.length-1) === element.toString()))
+        if(!(expression.charAt(expression.length-1) === element.toString() || expression.charAt(expression.length-1) === "+"))
         {
             display.innerText += element;
             expression += element;

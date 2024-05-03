@@ -9,10 +9,11 @@
     color: var(--font);
 }
 
-body{
+html, body{
     height: 100%;
     width: 100%;
     background-color: var(--theme);
+    overflow-y: hidden;
 }
 
 svg{
@@ -20,10 +21,13 @@ svg{
     position: absolute;
     background-color: transparent;
     opacity: 40%;
+    top: 20px;
+    left: 15px;
+    fill: var(--font);
     cursor: pointer;
 }
 
-#theme{
+input[type=checkbox]{
     display: none;
 }
 
@@ -144,12 +148,6 @@ svg{
     width: 100dvw;
 }
 
-#pallate{
-    top: 20px;
-    left: 15px;
-    fill: var(--font);
-}
-
 .main{
     display: flex;
     flex-direction: column;
@@ -157,7 +155,6 @@ svg{
 }
 
 .display-screen{
-    height: 40dvh;
     font-family: courier;
     font-weight: 500;
     font-size: 2rem;
@@ -167,6 +164,17 @@ svg{
     overflow: auto;
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
+    min-height: 35dvh;
+    max-height: 35dvh;
+}
+
+video{
+    position: absolute;
+    min-height: 30dvh;
+    max-height: 30dvh;
+    right: 15px;
+    top: 4dvh;
+    display: none;
 }
 
 .display-screen #display-text{
@@ -177,11 +185,11 @@ svg{
     width: 100%;
     text-align: right;
     overflow-wrap: break-word;
-    max-height: 100dvw;
+    max-width: 100dvw;
 }
 
 hr{
-    margin: 5px 15px;
+    margin: 0px 15px;
 }
 
 .keypad{
@@ -199,14 +207,14 @@ hr{
     align-items: center;
     border-bottom: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     transition: .08s ease;
     cursor: pointer;
 }
 
 .keypad div:active{
     color: var(--special);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .keypad .others:active{
@@ -215,14 +223,18 @@ hr{
 }
 
 .keypad .symbols{
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+.keypad .symbols:active{
+    font-size: 2.8rem;
 }
 
 .keypad #equal{
     background-color: var(--special);
     color: var(--theme);
     grid-area: 6 / 3 / -1 / -1;
-    font-size: 3rem;
+    font-size: 2.8rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;

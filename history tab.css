@@ -29,6 +29,7 @@
     font-size: 2rem;
     overflow-wrap: break-word;
     width: 100dvw;
+    cursor: pointer;
 }
 
 .history-tab #result{
@@ -37,6 +38,7 @@
     font-size: 3rem;
     overflow-wrap: break-word;
     width: 100dvw;
+    cursor: pointer;
 }
 
 #clear-history{
@@ -51,4 +53,5 @@
     display: none;
     flex: 1;
     user-select: none;
+    cursor: pointer;
 }

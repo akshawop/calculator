@@ -149,7 +149,6 @@ function playMeme()
 {
     video.style.display = "block";
     video.play();
-    video.bind("contextmenu", () => {return false;});
     video.onended = () => {video.style.display = "none";};
 }
 

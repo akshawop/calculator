@@ -175,6 +175,7 @@ video{
     right: 15px;
     top: 4dvh;
     display: none;
+    user-select: none;
 }
 
 .display-screen #display-text{

@@ -1,5 +1,5 @@
 //selecting root
-let root = document.querySelector(":root");
+const root = document.querySelector(":root");
 
 //theme settings on page reload
 if(localStorage.getItem("theme"))
@@ -38,7 +38,7 @@ function colors(id)
 }
 
 //selecting display screen element and creating new variable for calculation
-let display=document.querySelector("#display-text");
+const display = document.querySelector("#display-text");
 let expression = "";
 
 //function to show calculation on display screen, store them in the expression variable and some bug fixes
@@ -102,13 +102,6 @@ function showOnDisplay(element)
     }
 }
 
-//function to clear the display screen and empty the expression variable
-function clearScreen()
-{
-    display.innerText = "";
-    expression = "";
-}
-
 //function to delete one item at a time from the display screen and the expression variable
 function del()
 {
@@ -120,8 +113,20 @@ function del()
 //function to solve the given expression with some error handling
 function equalsOperation()
 {
+    //play meme
+    if(display.innerText === "0÷0")
+    {
+        display.innerText = "";
+        expression = "";
+        playMeme();
+        return;
+    }
+    //evaluate
+    let temp = "";
     try
     {
+        temp = eval(expression);
+        storeHistory();
         display.innerText = eval(expression);
         expression = display.innerText;
     }
@@ -130,4 +135,22 @@ function equalsOperation()
         display.innerText = "Error";
         expression = "Error";
     }
-    }
+}
+
+//meme section
+const video = document.querySelector("video");
+function playMeme()
+{
+    video.style.display = "block";
+    video.play();
+    video.onended = () => {video.style.display = "none";};
+}
+
+//function to clear the display screen and empty the expression variable
+function clearScreen()
+{
+    display.innerText = "";
+    expression = "";
+    video.pause();
+    video.style.display = "none";
+}

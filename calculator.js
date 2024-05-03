@@ -147,9 +147,9 @@ function equalsOperation()
 const video = document.querySelector("video");
 function playMeme()
 {
-    video.bind("contextmenu", () => {return false;});
     video.style.display = "block";
     video.play();
+    video.bind("contextmenu", () => {return false;});
     video.onended = () => {video.style.display = "none";};
 }
 

@@ -121,20 +121,26 @@ function equalsOperation()
         playMeme();
         return;
     }
+
     //evaluate
-    let temp = "";
-    try
+    if(display.innerText !== "")
     {
-        temp = eval(expression);
-        storeHistory();
-        display.innerText = eval(expression);
-        expression = display.innerText;
+        let temp = "";
+        try
+        {
+            temp = eval(expression);
+            storeHistory();
+            display.innerText = eval(expression);
+            expression = display.innerText;
+        }
+        catch(err)
+        {
+            display.innerText = "Error";
+            expression = "Error";
+        }
     }
-    catch(err)
-    {
-        display.innerText = "Error";
-        expression = "Error";
-    }
+    else
+        return;
 }
 
 //meme section

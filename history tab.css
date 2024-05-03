@@ -18,6 +18,7 @@
     overflow: auto;
     margin-top: 5px;
     font-size: 2rem;
+    user-select: none;
 }
 
 .history-tab #equation{
@@ -49,4 +50,5 @@
     padding: 1em 0;
     display: none;
     flex: 1;
+    user-select: none;
 }

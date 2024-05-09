@@ -116,6 +116,10 @@ function showOnDisplay(element)
     }
     else
     {
+        if (display.innerText === "0")
+        {
+            display.innerText = "";
+        }
         display.innerText += element;
         expression += element;
     }
@@ -124,9 +128,17 @@ function showOnDisplay(element)
 //function to delete one item at a time from the display screen and the expression variable
 function del()
 {
-    let temp = display.innerText;
-    display.innerText = temp.slice(0,temp.length-1);
-    expression = expression.slice(0, expression.length-1);
+    if (display.innerText.length == 1)
+    {
+        display.innerText = "0";
+        expression = "";
+    }
+    else
+    {
+        let temp = display.innerText;
+        display.innerText = temp.slice(0,temp.length-1);
+        expression = expression.slice(0, expression.length-1);
+    }
 }
 
 //function to solve the given expression with some error handling
@@ -174,7 +186,7 @@ function playMeme()
 //function to clear the display screen and empty the expression variable
 function clearScreen()
 {
-    display.innerText = "";
+    display.innerText = "0";
     expression = "";
     video.pause();
     video.style.display = "none";

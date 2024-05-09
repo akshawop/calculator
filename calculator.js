@@ -154,7 +154,7 @@ function equalsOperation()
     }
 
     //evaluate
-    if(display.innerText !== "")
+    if(expression !== "")
     {
         let temp = "";
         try

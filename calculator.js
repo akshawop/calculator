@@ -38,7 +38,7 @@ function colors(id)
 }
 
 //defining the valid keys to be pressed
-const validKeys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '%', '(', ')', '/', '*', '-', '+'];
+const validKeys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '(', ')', '/', '*', '-', '+'];
 
 //Event listener for key press
 document.addEventListener("keydown", () => {
@@ -145,7 +145,7 @@ function del()
 function equalsOperation()
 {
     //play meme
-    if(display.innerText === "0÷0")
+    if(display.innerText === "0÷0" || display.innerText === "0/0")
     {
         display.innerText = "";
         expression = "";

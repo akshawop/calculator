@@ -37,6 +37,25 @@ function colors(id)
     root.style.setProperty("--special", id);
 }
 
+//defining the valid keys to be pressed
+const validKeys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '%', '(', ')', '/', '*', '-', '+'];
+
+//Event listener for key press
+document.addEventListener("keydown", () => {
+    if (validKeys.includes(event.key)) {
+        showOnDisplay(event.key);
+    }
+    else if (event.key === "Delete") {
+        clearScreen();
+    }
+    else if (event.key === "Backspace") {
+        del();
+    }
+    else if (event.key === "Enter") {
+        equalsOperation();
+    }
+});
+
 //selecting display screen element and creating new variable for calculation
 const display = document.querySelector("#display-text");
 let expression = "";
@@ -47,7 +66,7 @@ function showOnDisplay(element)
     //scrolls to the end line
     display.scrollTo(0, display.scrollHeight);
     
-    if(element === "×")
+    if(element === "×" || element === "*")
     {
         if(!(expression.charAt(expression.length-1) === "*" || expression === ""))
         {
@@ -55,7 +74,7 @@ function showOnDisplay(element)
             expression += "*";
         }
     }
-    else if(element === "÷")
+    else if(element === "÷" || element === "/")
     {
         if(!(expression.charAt(expression.length-1) === "/" || expression === ""))
         {

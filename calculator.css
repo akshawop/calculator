@@ -1,20 +1,27 @@
+/* declared variables */
 :root{
     --theme: white;
     --font: black;
     --special: green;
 }
 
-*{
+
+/* added global style */
+*, *::before, *::after{
     background-color: var(--theme);
     color: var(--font);
 }
 
+
+/* html and body elements styles */
 html, body{
     height: 100%;
     width: 100%;
     background-color: var(--theme);
 }
 
+
+/* svg icons styles */
 svg{
     width: 2rem;
     position: absolute;
@@ -26,8 +33,42 @@ svg{
     cursor: pointer;
 }
 
+
+/* hidden checkboxes */
 input[type=checkbox]{
     display: none;
+}
+
+
+/* SIDEBAR STYLES BEGINNING */
+.sidebar{
+    background-color: var(--theme);
+    position: absolute;
+    z-index: 10;
+    height: 100dvh;
+    width: 54dvw;
+    left: -100%;
+    transition: .7s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+#theme:checked ~ .sidebar{
+    left: 0;
+}
+
+#overlay{
+    opacity: 0%;
+    transition: .7s ease;
+}
+
+#theme:checked ~ #overlay{
+    background-color: black;
+    opacity: 30%;
+    position: absolute;
+    z-index: 9;
+    height: 100dvh;
+    width: 100dvw;
 }
 
 .sidebar a{
@@ -116,37 +157,10 @@ input[type=checkbox]{
     color: transparent;
     font-weight: bolder;
 }
+/* SIDEBAR STYLES END */
 
-.sidebar{
-    background-color: var(--theme);
-    position: absolute;
-    z-index: 10;
-    height: 100dvh;
-    width: 54dvw;
-    left: -100%;
-    transition: .7s ease;
-    display: flex;
-    flex-direction: column;
-}
 
-#theme:checked ~ .sidebar{
-    left: 0;
-}
-
-#overlay{
-    opacity: 0%;
-    transition: .7s ease;
-}
-
-#theme:checked ~ #overlay{
-    background-color: black;
-    opacity: 30%;
-    position: absolute;
-    z-index: 9;
-    height: 100dvh;
-    width: 100dvw;
-}
-
+/* MAIN CALCULATOR BODY STYLES BEGINNING */
 .main{
     display: flex;
     flex-direction: column;
@@ -165,16 +179,6 @@ input[type=checkbox]{
     scroll-behavior: smooth;
     min-height: 35dvh;
     max-height: 35dvh;
-}
-
-video{
-    position: absolute;
-    min-height: 30dvh;
-    max-height: 30dvh;
-    right: 15px;
-    top: 4dvh;
-    display: none;
-    user-select: none;
 }
 
 .display-screen #display-text{
@@ -244,4 +248,17 @@ hr{
 .keypad #equal:active{
     background-color: var(--theme);
     color: var(--font);
+}
+/* MAIN CALCULATOR BODY STYLES END */
+
+
+/* meme video styles */
+video{
+    position: absolute;
+    min-height: 30dvh;
+    max-height: 30dvh;
+    right: 15px;
+    top: 4dvh;
+    display: none;
+    user-select: none;
 }

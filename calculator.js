@@ -1,17 +1,20 @@
-//selecting root
+// selecting root
 const root = document.querySelector(":root");
 
-//theme settings on page reload
+
+// theme settings on page reload
 if(localStorage.getItem("theme"))
 {
     root.style.setProperty("--theme", localStorage.getItem("theme"));
     root.style.setProperty("--font", localStorage.getItem("font"));
 }
 
-//colors settings on page reload
+
+// colors settings on page reload
 localStorage.getItem("special") && root.style.setProperty("--special", localStorage.getItem("special"));
 
-//theme modes switching function
+
+// theme modes switching function
 function themes(id)
 {
     if(id === "light")
@@ -30,40 +33,24 @@ function themes(id)
     }
 }
 
-//colors switching function
+
+// colors switching function
 function colors(id)
 {
     localStorage.setItem("special", id)
     root.style.setProperty("--special", id);
 }
 
-//defining the valid keys to be pressed
-const validKeys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '(', ')', '/', '*', '-', '+'];
 
-//Event listener for key press
-document.addEventListener("keydown", () => {
-    if (validKeys.includes(event.key)) {
-        showOnDisplay(event.key);
-    }
-    else if (event.key === "Delete") {
-        clearScreen();
-    }
-    else if (event.key === "Backspace") {
-        del();
-    }
-    else if (event.key === "Enter") {
-        equalsOperation();
-    }
-});
-
-//selecting display screen element and creating new variable for calculation
+// selecting display screen element and creating new variable for calculation
 const display = document.querySelector("#display-text");
 let expression = "";
 
-//function to show calculation on display screen, store them in the expression variable and some bug fixes
+
+// function to show calculation on display screen, store them in the expression variable and some bug fixes
 function showOnDisplay(element)
 {
-    //scrolls to the end line
+    // scrolls to the end line
     display.scrollTo(0, display.scrollHeight);
     
     if(element === "×" || element === "*")
@@ -116,16 +103,14 @@ function showOnDisplay(element)
     }
     else
     {
-        if (display.innerText === "0")
-        {
-            display.innerText = "";
-        }
+        if (display.innerText === "0") display.innerText = "";
         display.innerText += element;
         expression += element;
     }
 }
 
-//function to delete one item at a time from the display screen and the expression variable
+
+// function to delete one item at a time from the display screen and the expression variable
 function del()
 {
     if (display.innerText.length == 1)
@@ -141,10 +126,11 @@ function del()
     }
 }
 
-//function to solve the given expression with some error handling
+
+// function to solve the given expression with some error handling
 function equalsOperation()
 {
-    //play meme
+    // play meme
     if(display.innerText === "0÷0" || display.innerText === "0/0")
     {
         display.innerText = "";
@@ -153,7 +139,7 @@ function equalsOperation()
         return;
     }
 
-    //evaluate
+    // evaluate
     if(expression !== "")
     {
         let temp = "";
@@ -170,11 +156,11 @@ function equalsOperation()
             expression = "Error";
         }
     }
-    else
-        return;
+    else return;
 }
 
-//meme section
+
+// meme section
 const video = document.querySelector("video");
 function playMeme()
 {
@@ -183,7 +169,8 @@ function playMeme()
     video.onended = () => {video.style.display = "none";};
 }
 
-//function to clear the display screen and empty the expression variable
+
+// function to clear the display screen and empty the expression variable
 function clearScreen()
 {
     display.innerText = "0";

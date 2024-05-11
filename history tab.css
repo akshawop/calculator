@@ -1,12 +1,11 @@
+/* history icon styles */
 #history-icon{
     top: 20px;
     left: 65px;
 }
 
-.keypad{
-    margin-top: 5px;
-}
 
+/* history tab main styles */
 .history-tab{
     height: 0;
     min-height: 0;
@@ -21,6 +20,8 @@
     user-select: none;
 }
 
+
+/* STYLES FOR EQUATIONS AND THEIR RESULTS BEGINNING */
 .history-tab #equation{
     text-align: right;
     padding-right: 15px;
@@ -40,7 +41,10 @@
     width: 100dvw;
     cursor: pointer;
 }
+/* STYLES FOR EQUATIONS AND THEIR RESULTS END */
 
+
+/* clear history button styles */
 #clear-history{
     font-size: 1.2rem;
     font-weight: bold;

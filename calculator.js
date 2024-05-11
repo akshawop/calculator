@@ -96,7 +96,7 @@ function equalsOperation()
     }
 
     // evaluate
-    if(expression !== "")
+    if(expression !== "" && expression !== "0")
     {
         let temp = "";
         try

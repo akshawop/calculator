@@ -1,9 +1,10 @@
-//elements selection
+// elements selection
 const historyTab = document.querySelector(".history-tab");
 const keypad = document.querySelector(".keypad");
 const clrHistoryButton = document.querySelector("#clear-history");
 
-//history tab open/close
+
+// history tab open/close
 function historyTabToggle()
 {
     if(historyTab.style.minHeight === "")
@@ -22,30 +23,32 @@ function historyTabToggle()
     historyTab.scrollTo(0, historyTab.scrollHeight);
 }
 
-//printing past history tab elements on page load
+
+// printing past history tab elements on page load
 if(localStorage.getItem("counter"))
 {
-    historyTab.innerText = "";
+    historyTab.innerHTML = "";
     let limit = Number(localStorage.getItem("counter"));
-    for(let k=1; k<=limit; k++)
-        historyTab.innerHTML += localStorage.getItem(k);
+    for(let k=1; k<=limit; k++) historyTab.innerHTML += localStorage.getItem(k);
 }
 
-//setting initial value of key of history elements
-let i;
-localStorage.getItem("counter") ? i = Number(localStorage.getItem("counter")) : i = 0;
 
-//storing the calculations
+// setting initial value of key of history elements
+let i = localStorage.getItem("counter") ? Number(localStorage.getItem("counter")) : 0;
+
+
+// storing the calculations
 function storeHistory()
 {
     i++;
-    historyItem = `<span id=\"equation\" title=${expression} onclick=\"accessHistory(this.innerText, this.title);\">${display.innerText}<br><span id=\"result\">= ${eval(expression)}</span></span><br>`;
+    let historyItem = `<span id=\"equation\" title=${expression} onclick=\"accessHistory(this.innerText, this.title);\">${display.innerText}<br><span id=\"result\">= ${eval(expression)}</span></span><br>`;
     historyTab.innerText === "No history" ? historyTab.innerHTML = historyItem : historyTab.innerHTML += historyItem;
     localStorage.setItem(i, historyItem);
     localStorage.setItem("counter", i);
 }
 
-//accessing the history
+
+// accessing the history
 function accessHistory(displayValue, realValue)
 {
     displayValue = displayValue.slice(0, displayValue.indexOf("\n"));
@@ -54,7 +57,8 @@ function accessHistory(displayValue, realValue)
     historyTabToggle();
 }
 
-//clearing the history tab
+
+// clearing the history tab
 function clearHistory()
 {
     historyTab.innerHTML = "No history";

@@ -59,7 +59,11 @@ function showOnDisplay(element)
     }
     else
     {
-        if (display.innerText === "0") display.innerText = "";
+        if (display.innerText === "0")
+        {
+            display.innerText = "";
+            expression = "";
+        }
         display.innerText += element;
         expression += element;
     }

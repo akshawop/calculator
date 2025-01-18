@@ -2,7 +2,7 @@
 const historyTab = document.querySelector(".history-tab");
 const keypad = document.querySelector(".keypad");
 const clrHistoryButton = document.querySelector("#clear-history");
-const historyButton = document.getElementById("history-toggle-button");
+const historyButton = document.getElementById("history-icon");
 
 // history tab open/close
 function historyTabToggle()

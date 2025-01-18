@@ -7,6 +7,7 @@ const clrHistoryButton = document.querySelector("#clear-history");
 // history tab open/close
 function historyTabToggle()
 {
+    historyButton.removeAttribute("onclick");
     if(historyTab.style.minHeight === "")
     {
         historyTab.style.minHeight = "54dvh";
@@ -21,6 +22,7 @@ function historyTabToggle()
         keypad.style.display = "grid";
     }
     historyTab.scrollTo(0, historyTab.scrollHeight);
+    setTimeout(() => historyButton.setAttribute("onclick", "historyTabToggle()"), 700);
 }
 
 

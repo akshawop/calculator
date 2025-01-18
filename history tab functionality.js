@@ -2,7 +2,7 @@
 const historyTab = document.querySelector(".history-tab");
 const keypad = document.querySelector(".keypad");
 const clrHistoryButton = document.querySelector("#clear-history");
-
+const historyButton = document.getElementById("history-toggle-button");
 
 // history tab open/close
 function historyTabToggle()
@@ -13,17 +13,15 @@ function historyTabToggle()
         historyTab.style.minHeight = "54dvh";
         clrHistoryButton.style.display = "flex";
         setTimeout(() => keypad.style.display = "none" , 700);
-        setTimeout(() => historyButton.setAttribute("onclick", "historyTabToggle()"), 700);
-        
     }
     else
     {
         historyTab.style.minHeight = "";
         clrHistoryButton.style.display = "none";
         keypad.style.display = "grid";
-        setTimeout(() => historyButton.setAttribute("onclick", "historyTabToggle()"), 700);
     }
     historyTab.scrollTo(0, historyTab.scrollHeight);
+    setTimeout(() => historyButton.setAttribute("onclick", "historyTabToggle()"), 700);
 }
 
 

@@ -21,10 +21,22 @@ const validKeys = [
 
 // Event listener for key press
 document.addEventListener("keydown", (event) => {
-  if (validKeys.includes(event.key)) showOnDisplay(event.key);
-  else if (event.key === "Delete") clearScreen();
-  else if (event.key === "Backspace") del();
-  else if (event.key === "Enter") equalsOperation();
-  else if (event.key === "h" || event.key === "H")
-    document.getElementById("history-icon").onclick();
+  switch (event.key) {
+    case "Delete":
+      clearScreen();
+      break;
+    case "Backspace":
+      del();
+      break;
+    case "Enter":
+      equalsOperation();
+      break;
+    case "h":
+    case "H":
+      document.getElementById("history-icon").onclick();
+      break;
+    default:
+      if (validKeys.includes(event.key)) showOnDisplay(event.key);
+      break;
+  }
 });

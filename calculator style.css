@@ -1,7 +1,7 @@
 /* declared variables */
 :root {
   --theme: white;
-  --font: black;
+  --textcolor: black;
   --special: green;
 }
 
@@ -10,7 +10,7 @@
 *::before,
 *::after {
   background-color: var(--theme);
-  color: var(--font);
+  color: var(--textcolor);
 }
 
 /* html and body elements styles */
@@ -30,7 +30,7 @@ svg {
   opacity: 40%;
   top: 20px;
   left: 15px;
-  fill: var(--font);
+  fill: var(--textcolor);
   cursor: pointer;
 }
 
@@ -79,14 +79,14 @@ input[type="checkbox"] {
   margin-bottom: 0.5em;
   padding: 1em 0;
   color: var(--theme);
-  background-color: var(--font);
+  background-color: var(--textcolor);
   width: 100%;
   text-align: center;
 }
 
 .sidebar .mode-list {
   text-decoration: none;
-  color: var(--font);
+  color: var(--textcolor);
   padding: 1em 1.3em;
 }
 
@@ -98,7 +98,7 @@ input[type="checkbox"] {
 .sidebar .mode-list:active {
   font-weight: bold;
   font-size: 1.2rem;
-  background-color: var(--font);
+  background-color: var(--textcolor);
   color: var(--theme);
 }
 
@@ -115,7 +115,7 @@ input[type="checkbox"] {
 
 .sidebar .color-list {
   text-decoration: none;
-  color: var(--font);
+  color: var(--textcolor);
   padding: 1em 1.3em;
 }
 
@@ -182,7 +182,7 @@ input[type="checkbox"] {
 .display-screen #display-text {
   padding-right: 15px;
   padding-left: 15px;
-  color: var(--font);
+  color: var(--textcolor);
   font-size: 3rem;
   width: 100%;
   text-align: right;
@@ -246,7 +246,7 @@ hr {
 
 .keypad #equal:active {
   background-color: var(--theme);
-  color: var(--font);
+  color: var(--textcolor);
 }
 /* MAIN CALCULATOR BODY STYLES END */
 

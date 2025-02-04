@@ -6,7 +6,7 @@ const root = document.querySelector(":root");
 if(localStorage.getItem("theme"))
 {
     root.style.setProperty("--theme", localStorage.getItem("theme"));
-    root.style.setProperty("--font", localStorage.getItem("font"));
+    root.style.setProperty("--textcolor", localStorage.getItem("textcolor"));
 }
 
 
@@ -20,16 +20,16 @@ function themes(id)
     if(id === "light")
     {
         localStorage.setItem("theme", "white");
-        localStorage.setItem("font", "black");
+        localStorage.setItem("textcolor", "black");
         root.style.setProperty("--theme", localStorage.getItem("theme"));
-        root.style.setProperty("--font", localStorage.getItem("font"));
+        root.style.setProperty("--textcolor", localStorage.getItem("textcolor"));
     }
     else
     {
         localStorage.setItem("theme", "black");
-        localStorage.setItem("font", "white");
+        localStorage.setItem("textcolor", "white");
         root.style.setProperty("--theme", localStorage.getItem("theme"));
-        root.style.setProperty("--font", localStorage.getItem("font"));
+        root.style.setProperty("--textcolor", localStorage.getItem("textcolor"));
     }
 }
 

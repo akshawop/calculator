@@ -26,7 +26,7 @@
     text-align: right;
     padding-right: 15px;
     padding-left: 15px;
-    color: var(--font);
+    color: var(--textcolor);
     font-size: 2rem;
     overflow-wrap: break-word;
     width: 100dvw;
@@ -35,7 +35,7 @@
 
 .history-tab #result{
     text-align: right;
-    color: var(--font);
+    color: var(--textcolor);
     font-size: 3rem;
     overflow-wrap: break-word;
     width: 100dvw;

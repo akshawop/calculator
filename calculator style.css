@@ -1,265 +1,262 @@
 /* declared variables */
-:root{
-    --theme: white;
-    --font: black;
-    --special: green;
+:root {
+  --theme: white;
+  --font: black;
+  --special: green;
 }
-
 
 /* added global style */
-*, *::before, *::after{
-    background-color: var(--theme);
-    color: var(--font);
+*,
+*::before,
+*::after {
+  background-color: var(--theme);
+  color: var(--font);
 }
-
 
 /* html and body elements styles */
-html, body{
-    height: 100%;
-    width: 100%;
-    background-color: var(--theme);
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--theme);
+  overflow-y: hidden;
 }
-
 
 /* svg icons styles */
-svg{
-    width: 2rem;
-    position: absolute;
-    background-color: transparent;
-    opacity: 40%;
-    top: 20px;
-    left: 15px;
-    fill: var(--font);
-    cursor: pointer;
+svg {
+  width: 2rem;
+  position: absolute;
+  background-color: transparent;
+  opacity: 40%;
+  top: 20px;
+  left: 15px;
+  fill: var(--font);
+  cursor: pointer;
 }
-
 
 /* hidden checkboxes */
-input[type=checkbox]{
-    display: none;
+input[type="checkbox"] {
+  display: none;
 }
-
 
 /* SIDEBAR STYLES BEGINNING */
-.sidebar{
-    background-color: var(--theme);
-    position: absolute;
-    z-index: 10;
-    height: 100dvh;
-    width: 54dvw;
-    left: -100%;
-    transition: .7s ease;
-    display: flex;
-    flex-direction: column;
+.sidebar {
+  background-color: var(--theme);
+  position: absolute;
+  z-index: 10;
+  height: 100dvh;
+  width: 54dvw;
+  left: -100%;
+  transition: 0.7s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-#theme:checked ~ .sidebar{
-    left: 0;
+#theme:checked ~ .sidebar {
+  left: 0;
 }
 
-#overlay{
-    opacity: 0%;
-    transition: .7s ease;
+#overlay {
+  opacity: 0%;
+  transition: 0.7s ease;
 }
 
-#theme:checked ~ #overlay{
-    background-color: black;
-    opacity: 30%;
-    position: absolute;
-    z-index: 9;
-    height: 100dvh;
-    width: 100dvw;
+#theme:checked ~ #overlay {
+  background-color: black;
+  opacity: 30%;
+  position: absolute;
+  z-index: 9;
+  height: 100dvh;
+  width: 100dvw;
 }
 
-.sidebar a{
-    cursor: pointer;
+.sidebar a {
+  cursor: pointer;
 }
 
-.sidebar #mode{
-    align-self: center;
-    margin-bottom: .5em;
-    padding: 1em 0;
-    color: var(--theme);
-    background-color: var(--font);
-    width: 100%;
-    text-align: center;
+.sidebar #mode {
+  align-self: center;
+  margin-bottom: 0.5em;
+  padding: 1em 0;
+  color: var(--theme);
+  background-color: var(--font);
+  width: 100%;
+  text-align: center;
 }
 
-.sidebar .mode-list{
-    text-decoration: none;
-    color: var(--font);
-    padding: 1em 1.3em;
+.sidebar .mode-list {
+  text-decoration: none;
+  color: var(--font);
+  padding: 1em 1.3em;
 }
 
-.sidebar .mode-list:hover{
-    font-weight: bold;
-    font-size: 1.2rem;
+.sidebar .mode-list:hover {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.sidebar .mode-list:active{
-    font-weight: bold;
-    font-size: 1.2rem;
-    background-color: var(--font);
-    color: var(--theme);
+.sidebar .mode-list:active {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: var(--font);
+  color: var(--theme);
 }
 
-.sidebar #colors{
-    align-self: center;
-    margin-top: 1em;
-    margin-bottom: .5em;
-    padding: 1em 0;
-    color: var(--theme);
-    background-color: var(--special);
-    width: 100%;
-    text-align: center;
+.sidebar #colors {
+  align-self: center;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding: 1em 0;
+  color: var(--theme);
+  background-color: var(--special);
+  width: 100%;
+  text-align: center;
 }
 
-.sidebar .color-list{
-    text-decoration: none;
-    color: var(--font);
-    padding: 1em 1.3em;
+.sidebar .color-list {
+  text-decoration: none;
+  color: var(--font);
+  padding: 1em 1.3em;
 }
 
-.sidebar .color-list:hover{
-    color: var(--special);
-    font-weight: bold;
-    font-size: 1.2rem;
+.sidebar .color-list:hover {
+  color: var(--special);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.sidebar .color-list:active{
-    font-weight: bold;
-    font-size: 1.2rem;
-    background-color: var(--special);
-    color: var(--theme);
+.sidebar .color-list:active {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: var(--special);
+  color: var(--theme);
 }
 
-.sidebar #green:hover{
-    color: green;
+.sidebar #green:hover {
+  color: green;
 }
 
-.sidebar #red:hover{
-    color: red;
+.sidebar #red:hover {
+  color: red;
 }
 
-.sidebar #royalblue:hover{
-    color: royalblue;
+.sidebar #royalblue:hover {
+  color: royalblue;
 }
 
-.sidebar #orange:hover{
-    color: orange;
+.sidebar #orange:hover {
+  color: orange;
 }
 
-.sidebar #custom-colors{
-    margin-top: auto;
-    padding: 1em 1.5em;
-    background: linear-gradient(45deg, green, red, royalblue, orange);
-    background-clip: text;
-    color: transparent;
-    font-weight: bolder;
+.sidebar #custom-colors {
+  margin-top: auto;
+  padding: 1em 1.5em;
+  background: linear-gradient(45deg, green, red, royalblue, orange);
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
 }
 /* SIDEBAR STYLES END */
 
-
 /* MAIN CALCULATOR BODY STYLES BEGINNING */
-.main{
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
 }
 
-.display-screen{
-    font-family: courier;
-    font-weight: 500;
-    font-size: 2rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    overflow: auto;
-    scrollbar-gutter: stable;
-    scroll-behavior: smooth;
-    min-height: 35dvh;
-    max-height: 35dvh;
+.display-screen {
+  font-family: courier;
+  font-weight: 500;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: auto;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+  min-height: 35dvh;
+  max-height: 35dvh;
 }
 
-.display-screen #display-text{
-    padding-right: 15px;
-    padding-left: 15px;
-    color: var(--font);
-    font-size: 3rem;
-    width: 100%;
-    text-align: right;
-    overflow-wrap: break-word;
-    max-width: 100dvw;
+.display-screen #display-text {
+  padding-right: 15px;
+  padding-left: 15px;
+  color: var(--font);
+  font-size: 3rem;
+  width: 100%;
+  text-align: right;
+  overflow-wrap: break-word;
+  max-width: 100dvw;
 }
 
-hr{
-    margin: 0px 15px;
+hr {
+  margin: 0px 15px;
 }
 
-.keypad{
-    flex: 1;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2px;
-    margin-top: 5px;
-    user-select: none;
+.keypad {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  margin-top: 5px;
+  user-select: none;
 }
 
-.keypad div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    font-size: 1.3rem;
-    transition: .08s ease;
-    cursor: pointer;
+.keypad div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  font-size: 1.3rem;
+  transition: 0.08s ease;
+  cursor: pointer;
 }
 
-.keypad div:active{
-    color: var(--special);
-    font-size: 2.5rem;
+.keypad div:active {
+  color: var(--special);
+  font-size: 2.5rem;
 }
 
-.keypad .others:active{
-    color: var(--special);
-    font-size: 2rem;
+.keypad .others:active {
+  color: var(--special);
+  font-size: 2rem;
 }
 
-.keypad .symbols{
-    font-size: 1.8rem;
+.keypad .symbols {
+  font-size: 1.8rem;
 }
 
-.keypad .symbols:active{
-    font-size: 2.8rem;
+.keypad .symbols:active {
+  font-size: 2.8rem;
 }
 
-.keypad #equal{
-    background-color: var(--special);
-    color: var(--theme);
-    grid-area: 6 / 3 / -1 / -1;
-    font-size: 2.8rem;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+.keypad #equal {
+  background-color: var(--special);
+  color: var(--theme);
+  grid-area: 6 / 3 / -1 / -1;
+  font-size: 2.8rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
-.keypad #equal:active{
-    background-color: var(--theme);
-    color: var(--font);
+.keypad #equal:active {
+  background-color: var(--theme);
+  color: var(--font);
 }
 /* MAIN CALCULATOR BODY STYLES END */
 
-
 /* meme video styles */
-video{
-    position: absolute;
-    min-height: 30dvh;
-    max-height: 30dvh;
-    right: 15px;
-    top: 4dvh;
-    display: none;
-    user-select: none;
+video {
+  position: absolute;
+  min-height: 30dvh;
+  max-height: 30dvh;
+  right: 15px;
+  top: 4dvh;
+  display: none;
+  user-select: none;
 }

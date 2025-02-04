@@ -2,7 +2,7 @@
 :root {
   --theme: white;
   --textcolor: black;
-  --special: green;
+  --special: #008000;
 }
 
 /* added global style */
@@ -50,6 +50,7 @@ input[type="checkbox"] {
   transition: 0.7s ease;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 #theme:checked ~ .sidebar {
@@ -154,8 +155,18 @@ input[type="checkbox"] {
   background: linear-gradient(45deg, green, red, royalblue, orange);
   background-clip: text;
   color: transparent;
+  font-size: 1.2rem;
   font-weight: bolder;
 }
+
+.IroWheelBorder {
+  background-color: initial;
+}
+
+.IroColorPicker {
+  margin-left: 100px;
+}
+
 /* SIDEBAR STYLES END */
 
 /* MAIN CALCULATOR BODY STYLES BEGINNING */
